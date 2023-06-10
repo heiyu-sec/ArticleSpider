@@ -7,4 +7,5 @@ class JobboleSpider(scrapy.Spider):
     start_urls = ["https://news.cnblogs.com"]
 
     def parse(self, response):
+        response.xpath()
         pass
