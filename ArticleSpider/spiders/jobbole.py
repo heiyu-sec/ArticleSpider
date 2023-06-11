@@ -7,5 +7,6 @@ class JobboleSpider(scrapy.Spider):
     start_urls = ["https://news.cnblogs.com"]
 
     def parse(self, response):
-        response.xpath("/html/body/div[2]/div[2]/div[4]/div[1]/div[2]/h2/a")
-        pass
+       #url =  response.xpath('//*[@id="entry_743643"]/div[2]/h2/a/@href').extract_first("")
+       url = response.xpath('//div[@id="news_list"]//h2[@class="news_entry"]/a/@href').extract()
+       pass
